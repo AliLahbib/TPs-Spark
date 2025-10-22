@@ -1,0 +1,3 @@
+var map= sc.textFile("data/text.txt").flatMap(line=>line.split(" ")).map(word=>(word,1));
+var count = map.reduceByKey(_ + _);
+count.saveAsTextFile("output/");
